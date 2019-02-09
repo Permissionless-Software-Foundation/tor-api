@@ -20,4 +20,13 @@ koa:
 #    - ./logs:/home/coinjoin/consolidating-coinjoin/logs
     - ./keys:/home/safeuser/keys
 
-  restart: always
+#  restart: always
+
+tor:
+  image: goldy/tor-hidden-service
+  links:
+    - koa
+  environment:
+      KOA_PORTS: 80:80 # Map port to detected service
+  volumes:
+    - ./keys:/var/lib/tor/hidden_service/

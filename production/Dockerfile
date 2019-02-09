@@ -32,7 +32,7 @@ RUN echo 'abcd8765' | sudo -S pwd
 
 # Clone the rest.bitcoin.com repository
 WORKDIR /home/safeuser
-RUN git clone https://github.com/christroutner/koa-api-boilerplate
+RUN git clone https://github.com/Permissionless-Software-Foundation/tor-api
 RUN mv koa-api-boilerplate koa
 RUN mkdir keys
 
@@ -45,6 +45,7 @@ RUN git checkout docker
 
 # Install dependencies
 RUN npm install
+RUN npm run docs
 
 VOLUME /home/safeuser/keys
 
