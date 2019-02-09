@@ -33,12 +33,12 @@ RUN echo 'abcd8765' | sudo -S pwd
 # Clone the rest.bitcoin.com repository
 WORKDIR /home/safeuser
 RUN git clone https://github.com/Permissionless-Software-Foundation/tor-api
-RUN mv koa-api-boilerplate koa
+#RUN mv koa-api-boilerplate koa
 RUN mkdir keys
 
 # Switch to the desired branch. `master` is usually stable,
 # and `stage` has the most up-to-date changes.
-WORKDIR /home/safeuser/koa
+WORKDIR /home/safeuser/tor-api
 
 # For development: switch to unstable branch
 #RUN git checkout docker
