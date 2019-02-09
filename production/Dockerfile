@@ -41,7 +41,7 @@ RUN mkdir keys
 WORKDIR /home/safeuser/koa
 
 # For development: switch to unstable branch
-RUN git checkout docker
+#RUN git checkout docker
 
 # Install dependencies
 RUN npm install
