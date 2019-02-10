@@ -51,8 +51,9 @@ RUN npm run docs
 VOLUME /home/safeuser/keys
 
 # Initialize the static dir for serving static content.
+RUN mkdir static
 COPY index.html /home/safeuser/static/index.html
-VOLUME /home/safeuser/static
+VOLUME /home/safeuser/tor-api/static
 
 
 EXPOSE 5000
