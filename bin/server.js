@@ -31,6 +31,7 @@ async function startServer () {
 
   // Used to generate the docs.
   app.use(convert(mount('/docs', serve(`${process.cwd()}/docs`))))
+  app.use(convert(mount('/', serve(`${process.cwd()}/static`))))
 
   // User Authentication
   require('../config/passport')
