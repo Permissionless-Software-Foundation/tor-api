@@ -49,13 +49,13 @@ RUN npm run docs
 
 VOLUME /home/safeuser/keys
 
-EXPOSE 3000
+EXPOSE 5000
 
 # Start the application.
-#COPY start-production start-production
-#CMD ["./start-production"]
+COPY start-production start-production
+CMD ["./start-production"]
 
 #CMD ["npm", "start"]
 
-COPY dummyapp.js dummyapp.js
-CMD ["node", "dummyapp.js"]
+#COPY dummyapp.js dummyapp.js
+#CMD ["node", "dummyapp.js"]
