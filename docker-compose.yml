@@ -17,7 +17,7 @@ koa:
   ports:
     - "5000:5000"  # <host port>:<container port>
   volumes:
-#    - ./logs:/home/coinjoin/consolidating-coinjoin/logs
+    - ./static:/home/safeuser/tor-api/static
     - ./keys:/home/safeuser/keys
 
 #  restart: always
@@ -27,6 +27,6 @@ tor:
   links:
     - koa
   environment:
-      KOA_PORTS: 80:80 # Map port to detected service
+      KOA_PORTS: 80:5000 # Map port to detected service
   volumes:
     - ./keys:/var/lib/tor/hidden_service/

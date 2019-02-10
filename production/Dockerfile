@@ -41,18 +41,28 @@ RUN mkdir keys
 WORKDIR /home/safeuser/tor-api
 
 # For development: switch to unstable branch
-#RUN git checkout docker
+RUN git checkout unstable
 
 # Install dependencies
 RUN npm install
 RUN npm run docs
 
+# This is where tor keys will be stored.
 VOLUME /home/safeuser/keys
 
-EXPOSE 3000
+# Initialize the static dir for serving static content.
+RUN mkdir static
+COPY index.html /home/safeuser/tor-api/static/index.html
+VOLUME /home/safeuser/tor-api/static
+
+
+EXPOSE 5000
 
 # Start the application.
 COPY start-production start-production
 CMD ["./start-production"]
 
 #CMD ["npm", "start"]
+
+#COPY dummyapp.js dummyapp.js
+#CMD ["node", "dummyapp.js"]
