@@ -47,7 +47,12 @@ RUN git checkout unstable
 RUN npm install
 RUN npm run docs
 
+# This is where tor keys will be stored.
 VOLUME /home/safeuser/keys
+
+# Initialize the static dir for serving static content.
+VOLUME /home/safeuser/static
+COPY index.html /home/safeuser/static/index.html
 
 EXPOSE 5000
 
