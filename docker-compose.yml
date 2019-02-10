@@ -15,7 +15,7 @@ koa:
   links:
     - koa-mongodb
   ports:
-    - "80:5000"  # <host port>:<container port>
+    - "5000:5000"  # <host port>:<container port>
   volumes:
 #    - ./logs:/home/coinjoin/consolidating-coinjoin/logs
     - ./keys:/home/safeuser/keys
@@ -27,6 +27,6 @@ tor:
   links:
     - koa
   environment:
-      KOA_PORTS: 80:80 # Map port to detected service
+      KOA_PORTS: 80:5000 # Map port to detected service
   volumes:
     - ./keys:/var/lib/tor/hidden_service/
