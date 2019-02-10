@@ -41,7 +41,7 @@ RUN mkdir keys
 WORKDIR /home/safeuser/tor-api
 
 # For development: switch to unstable branch
-#RUN git checkout docker
+RUN git checkout unstable
 
 # Install dependencies
 RUN npm install
@@ -52,7 +52,10 @@ VOLUME /home/safeuser/keys
 EXPOSE 3000
 
 # Start the application.
-COPY start-production start-production
-CMD ["./start-production"]
+#COPY start-production start-production
+#CMD ["./start-production"]
 
 #CMD ["npm", "start"]
+
+COPY dummyapp.js dummyapp.js
+CMD ["node", "dummyapp.js"]
