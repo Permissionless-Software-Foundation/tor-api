@@ -17,7 +17,7 @@ koa:
   ports:
     - "5000:5000"  # <host port>:<container port>
   volumes:
-    - ./static:/home/safeuser/static
+    - ./static:/home/safeuser/tor-api/static
     - ./keys:/home/safeuser/keys
 
 #  restart: always

@@ -52,7 +52,7 @@ VOLUME /home/safeuser/keys
 
 # Initialize the static dir for serving static content.
 RUN mkdir static
-COPY index.html /home/safeuser/static/index.html
+COPY index.html /home/safeuser/tor-api/static/index.html
 VOLUME /home/safeuser/tor-api/static
 
 
