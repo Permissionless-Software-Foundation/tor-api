@@ -8,6 +8,20 @@ hidden service.
 
 
 ## Installation
+These directions are geared at Ubuntu 18.04 OS with at least 1GB of RAM,
+and a non-root user with sudo privileges. Your mileage may vary.
+
+1. It's always a good idea to add
+[swap space](https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-16-04)
+to a new system. I recommend 2GB of swap typically.
+
+2. Install Docker on the host system. Steps 1 and 2 in
+[this tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04)
+shows how to install Docker on a Ubuntu system.
+
+3. Install Docker Compose too. [This tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-docker-compose-on-ubuntu-16-04)
+shows how to do so on a Ubuntu system.
+
 ```bash
 git clone https://github.com/Permissionless-Software-Foundation/tor-api
 cd tor-api
