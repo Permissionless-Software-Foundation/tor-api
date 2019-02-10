@@ -61,4 +61,4 @@ docs
 coverage
 database/
 keys/*
-
+static/*
