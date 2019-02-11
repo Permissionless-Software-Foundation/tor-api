@@ -6,6 +6,8 @@ It builds on top of this [koa-api-boilerplate](https://github.com/christroutner/
 by adding a tor Docker container and piping the output of koa through a tor _.onion_
 hidden service.
 
+Walk-through video:
+https://www.youtube.com/watch?v=oihYLjKiUQ0
 
 ## Installation
 These directions are geared at Ubuntu 18.04 OS with at least 1GB of RAM,
