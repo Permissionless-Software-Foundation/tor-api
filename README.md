@@ -1,7 +1,7 @@
 # tor-api
 
 This repository is a boilerplate for building APIs with
-[koa2](https://github.com/koajs/koa/tree/v2.x) and mongodb.
+[koa2](https://github.com/koajs/koa) and mongodb.
 It builds on top of this [koa-api-boilerplate](https://github.com/christroutner/koa-api-boilerplate)
 by adding a tor Docker container and piping the output of koa through a tor _.onion_
 hidden service.
